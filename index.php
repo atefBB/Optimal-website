@@ -130,6 +130,19 @@ if (isset($_POST['submit'])) {
   </div>
   <div class="container">
     <div class="row team">
+      <div class="col-md-4 b3">
+        <img class="img-responsive" src="images/picTeam/picT3.png">
+        <h4>Malek Boubakri</h4>
+        <h5>Production manager</h5>
+        <h5>Java Certified Developer</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+        </ul>
+      </div>
       <div class="col-md-4">
         <img class="img-responsive" src="images/picTeam/picT2.png">
         <h4>Aymen Ben Khemis</h4>
@@ -143,12 +156,26 @@ if (isset($_POST['submit'])) {
           <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
         </ul>
       </div>
-      <div class="col-md-4 b3">
-        <img class="img-responsive" src="images/picTeam/picT3.png">
-        <h4>Malek Boubakri</h4>
-        <h5>Production manager</h5>
-        <h5>Senior Java Certified Developer</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+      <div class="col-md-4 b1">
+        <img class="img-responsive" src="images/picTeam/picT1.png">
+        <h4>Zaki Meddeb</h4>
+        <h5>Full-stack Developer</h5>
+        <h5>Test and validation engineer</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row team">
+      <div class="col-md-4 b1">
+        <img class="img-responsive" src="images/picTeam/picT0.png">
+        <h4>Aymen Ben Dhiab</h4>
+        <h5>Sales manager</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
         <ul>
           <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -157,10 +184,22 @@ if (isset($_POST['submit'])) {
         </ul>
       </div>
       <div class="col-md-4 b1">
-        <img class="img-responsive" src="images/picTeam/picT1.png">
-        <h4>Foulen Foulani</h4>
-        <h5>Project Manager</h5>
-        <h5>Developer</h5>
+        <img class="img-responsive" src="images/picTeam/picT0.png">
+        <h4>Zied Haj Salah</h4>
+        <h5>Full-stack Developer</h5>
+        <h5>JavaScript/MERN stack Architect</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 b1">
+        <img class="img-responsive" src="images/picTeam/picT0.png">
+        <h4>Khalil Chakroun</h4>
+        <h5>Technical sales / Former</h5>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
         <ul>
           <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
@@ -400,9 +439,15 @@ if (isset($_POST['submit'])) {
         if ($(".Email").val().length > 0) {
           if ($(".Message").val().length > 0) {
             $("#form-mail").submit();
-          }else{$(".Message").focus()}
-        }else{$(".Email").focus()}
-      }else{$(".Name").focus()}
+          } else {
+            $(".Message").focus()
+          }
+        } else {
+          $(".Email").focus()
+        }
+      } else {
+        $(".Name").focus()
+      }
     });
     $(".pretty a[rel^='prettyPhoto']").prettyPhoto({animation_speed: 'normal', theme: 'light_square', slideshow: 3000, autoplay_slideshow: true, social_tools: ''});
   });
