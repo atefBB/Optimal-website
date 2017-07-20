@@ -1,3 +1,21 @@
+<?php
+if(isset($_POST['submit'])){
+    $to = "contact@optimal.com.tn"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+    $subject = $_POST['subject'];
+    $subject2 = "Copy of " . $subject;
+    $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    $flash = "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +57,12 @@
   </script>
 </head>
 <body>
+<?php if (isset($flash)) { ?>
+<div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+     <?php echo $flash; ?>
+</div>
+<?php } ?>
 <!--home start-->
 <div id="home">
   <div class="headerLine">
@@ -220,15 +244,20 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9 col-xs-12 forma">
-        <form>
-          <input type="text" class="col-md-6 col-xs-12 name" name='name' placeholder='Name *'/>
-          <input type="text" class="col-md-6 col-xs-12 Email" name='Email' placeholder='Email *'/>
-          <input type="text" class="col-md-12 col-xs-12 Subject" name='Subject' placeholder='Subject'/>
-          <textarea type="text" class="col-md-12 col-xs-12 Message" name='Message' placeholder='Message *'></textarea>
+        <form action="" method="post">
+          <input type="text" class="col-md-6 col-xs-12 name" name='name'
+                 placeholder='Name *' required/>
+          <input type="email" class="col-md-6 col-xs-12 Email" name='email' required
+                 placeholder='Email *'/>
+          <input type="text" class="col-md-12 col-xs-12 Subject"
+                 name='subject' placeholder='Subject' required/>
+          <textarea type="text" class="col-md-12 col-xs-12 Message"
+                    name='message' placeholder='Message *' required></textarea>
           <div class="cBtn col-xs-12">
             <ul>
               <li class="clear"><a href="#"><i class="fa fa-times"></i>clear form</a></li>
-              <li class="send"><a href="#"><i class="fa fa-share"></i>Send Message</a></li>
+              <li class="send"><button type="submit" name="submit"><i class="fa
+              fa-share"></i>SendMessage</button></li>
             </ul>
           </div>
         </form>
