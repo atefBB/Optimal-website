@@ -39,8 +39,8 @@ if (isset($_POST['submit'])) {
   <script type="text/javascript" src="js/sorting.min.js"></script>
   <script type="text/javascript" src="js/myscript.min.js"></script>
   <script type="text/javascript">
-    jQuery(function () {
-      jQuery('#camera_wrap_1').camera({
+    $(function () {
+      $('#camera_wrap_1').camera({
         transPeriod: 500,
         time: 3000,
         height: '490px',
@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
 <?php if (isset($flash)) { ?>
   <div class="hint-mail">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <?php echo $flash; ?>
+    <span class="message"><?php echo $flash; ?></span>
   </div>
 <?php } ?>
 <!--home start-->
@@ -242,23 +242,15 @@ if (isset($_POST['submit'])) {
   <div class="container">
     <div class="row">
       <div class="col-md-9 col-xs-12 forma">
-        <form action="" method="post">
-          <input type="text" class="col-md-6 col-xs-12 name" name='name'
-                 placeholder='Name *' required/>
-          <input type="email" class="col-md-6 col-xs-12 Email" name='email' required
-                 placeholder='Email *'/>
-          <input type="text" class="col-md-12 col-xs-12 Subject"
-                 name='subject' placeholder='Subject' required/>
-          <textarea type="text" class="col-md-12 col-xs-12 Message"
-                    name='message' placeholder='Message *' required></textarea>
+        <form action="" method="post" id="form-mail">
+          <input type="text" class="col-md-6 col-xs-12 Name" name='name' placeholder='Name *' required/>
+          <input type="email" class="col-md-6 col-xs-12 Email" name='email' required placeholder='Email *'/>
+          <input type="text" class="col-md-12 col-xs-12 Subject" name='subject' placeholder='Subject' required/>
+          <textarea type="text" class="col-md-12 col-xs-12 Message" name='message' placeholder='Message *' required></textarea>
           <div class="cBtn col-xs-12">
             <ul>
-              <li class="clear"><a href="#"><i class="fa fa-times"></i>clear form</a></li>
-              <li class="send">
-                <button type="submit" name="submit"><i class="fa
-              fa-share"></i>SendMessage
-                </button>
-              </li>
+              <li class="clear"><a href="#"><i class="fa fa-times"></i>Clear</a></li>
+              <li class="send"><a name="submit"><i class="fa fa-share"></i>Send Message</a></li>
             </ul>
           </div>
         </form>
@@ -270,10 +262,10 @@ if (isset($_POST['submit'])) {
           <li>
           <li class="fa fa-clock-o"></li>
           From Monday to Friday - 8h to 14h</li></li>
-          <li><a href="#"><i class="fa fa-envelope"></i>contact@optimal.com.tn</a></li>
+          <li><a href="mailto:contact@optimal.com.tn"><i class="fa fa-envelope"></i>contact@optimal.com.tn</a></li>
           <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
           <li><a href="#"><i class="fa fa-facebook-square"></i>Facebook</a></li>
-          <li><a href="#"><i class="fa fa-linkedin"></i>Linked In</a></li>
+          <li><a href="https://www.linkedin.com/company-beta/11034851/"><i class="fa fa-linkedin"></i>Linked In</a></li>
           <li><a href="#"><i class="fa fa-youtube-play"></i>YouTube</a></li>
         </ul>
       </div>
@@ -293,7 +285,7 @@ if (isset($_POST['submit'])) {
     </div>
   </div>
 </div>
-<script type="text/javascript">
+<script type="text/javascript" charset="UTF-8">
   $(document).ready(function () {
     $(".bhide").click(function () {
       $(".hideObj").slideDown();
@@ -344,12 +336,12 @@ if (isset($_POST['submit'])) {
     }, 500);
   });
 </script>
-<script type="text/javascript">
-  jQuery(document).ready(function () {
-    jQuery('#menu').slicknav();
+<script type="text/javascript" charset="UTF-8">
+  $(document).ready(function () {
+    $('#menu').slicknav();
   });
 </script>
-<script type="text/javascript">
+<script type="text/javascript" charset="UTF-8">
   $(document).ready(function () {
     var $menu = $("#menuF");
     $(window).scroll(function () {
@@ -370,7 +362,7 @@ if (isset($_POST['submit'])) {
   });
   //jQuery
 </script>
-<script type="text/javascript">
+<script type="text/javascript" charset="UTF-8">
   /*menu*/
   function calculateScroll() {
     var contentTop = [];
@@ -402,10 +394,31 @@ if (isset($_POST['submit'])) {
   });
 </script>
 <script type="text/javascript" charset="UTF-8">
-  jQuery(document).ready(function () {
-    jQuery(".pretty a[rel^='prettyPhoto']").prettyPhoto({animation_speed: 'normal', theme: 'light_square', slideshow: 3000, autoplay_slideshow: true, social_tools: ''});
+  $(document).ready(function () {
+    $(".send").click(function () {
+      if ($(".Name").val().length > 0) {
+        if ($(".Email").val().length > 0) {
+          if ($(".Message").val().length > 0) {
+            $("#form-mail").submit();
+          }else{$(".Message").focus()}
+        }else{$(".Email").focus()}
+      }else{$(".Name").focus()}
+    });
+    $(".pretty a[rel^='prettyPhoto']").prettyPhoto({animation_speed: 'normal', theme: 'light_square', slideshow: 3000, autoplay_slideshow: true, social_tools: ''});
   });
 </script>
+<?php if (isset($flash)) { ?>
+  <script type="text/javascript" charset="UTF-8">
+    $(document).ready(function () {
+      setTimeout(function () {
+        $(".hint-mail .message").fadeOut(1000);
+        $(".hint-mail .close").fadeOut(1000, function () {
+          $(".hint-mail").remove();
+        });
+      }, 5000);
+    });
+  </script>
+<?php } ?>
 </body>
 
 </html>

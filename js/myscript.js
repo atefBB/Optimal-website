@@ -6,21 +6,18 @@ window.jQuery = window.$ = jQuery;
 /*-----------------------------------------------------------------------------------*/
 /*	CHART
 /*-----------------------------------------------------------------------------------*/
-jQuery(document).ready(function () {
+$(document).ready(function () {
   var chart = $('.chart'),
       chartNr = $('.chart-content'),
       chartParent = chart.parent();
-
   function centerChartsNr() {
     chartNr.css({
       top: (chart.height() - chartNr.outerHeight()) / 2
     });
   }
-
   if (chart.length) {
     centerChartsNr();
     $(window).resize(centerChartsNr);
-
     chartParent.each(function () {
       $(this).onScreen({
         doIn: function () {
@@ -44,6 +41,11 @@ jQuery(document).ready(function () {
       });
     });
   }
+  //-------------------------------------------
+
+
+
+  //-------------------------------------------
 });
 
 /**!
