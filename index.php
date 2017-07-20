@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
     $to = "contact@optimal.com.tn"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $name = $_POST['name'];
@@ -7,15 +7,13 @@ if(isset($_POST['submit'])){
     $subject2 = "Copy of " . $subject;
     $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
     $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
-
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    $flash = "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+    mail($to, $subject, $message, $headers);
+    mail($from, $subject2, $message2, $headers2); // sends a copy of the message to the sender
+    $flash = "<span class='fa fa-check'></span> Mail sent successfully. Thank you " . $name . ", we will contact you shortly...";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,10 +56,10 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 <?php if (isset($flash)) { ?>
-<div class="alert alert-success alert-dismissible" role="alert">
+  <div class="hint-mail">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-     <?php echo $flash; ?>
-</div>
+      <?php echo $flash; ?>
+  </div>
 <?php } ?>
 <!--home start-->
 <div id="home">
@@ -256,8 +254,11 @@ if(isset($_POST['submit'])){
           <div class="cBtn col-xs-12">
             <ul>
               <li class="clear"><a href="#"><i class="fa fa-times"></i>clear form</a></li>
-              <li class="send"><button type="submit" name="submit"><i class="fa
-              fa-share"></i>SendMessage</button></li>
+              <li class="send">
+                <button type="submit" name="submit"><i class="fa
+              fa-share"></i>SendMessage
+                </button>
+              </li>
             </ul>
           </div>
         </form>
