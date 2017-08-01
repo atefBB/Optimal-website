@@ -282,7 +282,7 @@ if (isset($_POST['submit'])) {
     <div class="row">
       <div class="col-md-9 col-xs-12 forma">
         <form action="" method="post" id="form-mail">
-          <input type="text" class="col-md-6 col-xs-12 Name" name='name' placeholder='Name *' required/>
+          <input type="text" class="col-md-6 col-xs-12 name" name='name' placeholder='Name *' required/>
           <input type="email" class="col-md-6 col-xs-12 Email" name='email' required placeholder='Email *'/>
           <input type="text" class="col-md-12 col-xs-12 Subject" name='subject' placeholder='Subject' required/>
           <textarea type="text" class="col-md-12 col-xs-12 Message" name='message' placeholder='Message *' required></textarea>
@@ -314,10 +314,14 @@ if (isset($_POST['submit'])) {
   <div class="line7">
     <div class="container">
       <div class="row downLine">
-        <div class="col-md-6 text-left copy">
+        <div class="col-md-5 text-left copy">
           <p>Copyright &copy; 2017 <img src="images/logo.png" style="width: 140px">. All Rights Reserved.</p>
         </div>
-        <div class="col-md-6 text-right copy">
+        <div class="col-md-2 text-center copy">
+          <a href="http://www.dmca.com/Protection/Status.aspx?ID=15178652-a76e-4a52-9890-2c3c82fa51c7" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/dmca-badge-w100-5x1-07.png?ID=15178652-a76e-4a52-9890-2c3c82fa51c7" alt="DMCA.com Protection Status"></a>
+          <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+        </div>
+        <div class="col-md-5 text-right copy">
           Open source <span class="fa fa-html5" style="color: orange"></span> + <span class="fa fa-css3" style="color: turquoise"></span> + <span class="fa fa-square" style="color: gold"></span> available on <a style="color: white" href="https://github.com/Optimal-Solution-ltd/Optimal-website"><span class="fa fa-github"></span> GitHub</a>.
         </div>
       </div>
@@ -345,7 +349,7 @@ if (isset($_POST['submit'])) {
     function sdf_FTS(_number, _decimal, _separator) {
       var decimal = (typeof(_decimal) != 'undefined') ? _decimal : 2;
       var separator = (typeof(_separator) != 'undefined') ? _separator : '';
-      var r = parseFloat(_number)
+      var r = parseFloat(_number);
       var exp10 = Math.pow(10, decimal);
       r = Math.round(r * exp10) / exp10;
       rr = Number(r).toFixed(decimal).toString().split('.');
@@ -412,7 +416,7 @@ if (isset($_POST['submit'])) {
     $('.navmenu').find('a').each(function () {
       contentTop.push($($(this).attr('href')).offset().top);
       contentBottom.push($($(this).attr('href')).offset().top + $($(this).attr('href')).height());
-    })
+    });
     $.each(contentTop, function (i) {
       if (winTop > contentTop[i] - rangeTop && winTop < contentBottom[i] - rangeBottom) {
         $('.navmenu li')
@@ -420,7 +424,7 @@ if (isset($_POST['submit'])) {
             .eq(i).addClass('active');
       }
     })
-  };
+  }
   $(document).ready(function () {
     calculateScroll();
     $(window).scroll(function (event) {
@@ -435,7 +439,7 @@ if (isset($_POST['submit'])) {
 <script type="text/javascript" charset="UTF-8">
   $(document).ready(function () {
     $(".send").click(function () {
-      if ($(".Name").val().length > 0) {
+      if ($(".name").val().length > 0) {
         if ($(".Email").val().length > 0) {
           if ($(".Message").val().length > 0) {
             $("#form-mail").submit();
@@ -446,7 +450,7 @@ if (isset($_POST['submit'])) {
           $(".Email").focus()
         }
       } else {
-        $(".Name").focus()
+        $(".name").focus()
       }
     });
     $(".pretty a[rel^='prettyPhoto']").prettyPhoto({animation_speed: 'normal', theme: 'light_square', slideshow: 3000, autoplay_slideshow: true, social_tools: ''});
