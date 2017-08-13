@@ -2359,4 +2359,11 @@ background: rgba(0,0,0,0);
 
 /**/
 
+.flag-img {
+  width: 30px;
+  opacity: 0.6;
+}
 
+.flag-img:hover {
+  opacity: 1;
+}
