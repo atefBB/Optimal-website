@@ -414,6 +414,7 @@ if (isset($_POST['submit'])) {
       }
     })
   }
+
   $(document).ready(function () {
     calculateScroll();
     $(window).scroll(function (event) {
