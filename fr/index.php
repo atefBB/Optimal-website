@@ -20,14 +20,14 @@ if (isset($_POST['submit'])) {
   <title>Optimal Solution</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="images/favicon.png" rel="shortcut icon">
+  <link href="/assets/images/favicon.png" rel="shortcut icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prettyPhoto/3.1.6/css/prettyPhoto.min.css" media="screen" title="prettyPhoto main stylesheet" charset="UTF-8"/>
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
-  <link rel='stylesheet' type="text/css" href="css/camera.min.css" id='camera-css' media='all'><!-- can't edit this -->
-  <link rel="stylesheet" type="text/css" href="css/slicknav.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel='stylesheet' type="text/css" href="/assets/css/camera.min.css" id='camera-css' media='all'><!-- can't edit this -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/slicknav.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.min.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><!-- can't upgrade this -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Camera/1.3.4/scripts/jquery.mobile.customized.min.js"></script>
@@ -35,9 +35,9 @@ if (isset($_POST['submit'])) {
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prettyPhoto/3.1.6/js/jquery.prettyPhoto.min.js" charset="UTF-8"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/slickNavbar.min.js"></script>
-  <script type="text/javascript" src="js/sorting.min.js"></script>
-  <script type="text/javascript" src="js/myscript.min.js"></script>
+  <script type="text/javascript" src="/assets/js/slickNavbar.min.js"></script>
+  <script type="text/javascript" src="/assets/js/sorting.min.js"></script>
+  <script type="text/javascript" src="/assets/js/myscript.min.js"></script>
   <script type="text/javascript">
     $(function () {
       $('#camera_wrap_1').camera({
@@ -70,7 +70,7 @@ if (isset($_POST['submit'])) {
           <div class="logo col-md-4">
             <div>
               <a href="#">
-                <img src="images/logo.png" style="width: 200px">
+                <img src="/assets/images/logo.png" style="width: 200px">
               </a>
             </div>
           </div>
@@ -80,8 +80,8 @@ if (isset($_POST['submit'])) {
                 <li class="active"><a href="#home">Accueil</a></li>
                 <li><a href="#team">Équipe</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="/en"><img class="flag-img" src="images/flags/United-Kingdom.png"/></a></li>
-                <li class="last"><a href="/ar"><img class="flag-img" src="images/flags/Tunisia.png"/></a></li>
+                <li><a href="/en/index.php"><img class="flag-img" src="/assets/images/flags/United-Kingdom.png"/></a></li>
+                <li class="last"><a href="/ar/index.php"><img class="flag-img" src="/assets/images/flags/Tunisia.png"/></a></li>
               </ul>
             </div>
           </div>
@@ -92,22 +92,22 @@ if (isset($_POST['submit'])) {
       <div class="row wrap">
         <div class="col-md-12 gallery">
           <div class="camera_wrap camera_white_skin" id="camera_wrap_1">
-            <div data-thumb="" data-src="images/slides/blank.gif">
+            <div data-thumb="" data-src="/assets/images/slides/blank.gif">
               <div class="img-responsive camera_caption fadeFromBottom">
                 <h2>Nous Ecoutons,</h2>
               </div>
             </div>
-            <div data-thumb="" data-src="images/slides/blank.gif">
+            <div data-thumb="" data-src="/assets/images/slides/blank.gif">
               <div class="img-responsive camera_caption fadeFromBottom">
                 <h2>Nous discutons,</h2>
               </div>
             </div>
-            <div data-thumb="" data-src="images/slides/blank.gif">
+            <div data-thumb="" data-src="/assets/images/slides/blank.gif">
               <div class="img-responsive camera_caption fadeFromBottom">
-                <h2>Nous dével<img src="images/favicon_inverse.png" style="width:70px;">ppons,</h2>
+                <h2>Nous dével<img src="/assets/images/favicon_inverse.png" style="width:70px;">ppons,</h2>
               </div>
             </div>
-            <div data-thumb="" data-src="images/slides/blank.gif">
+            <div data-thumb="" data-src="/assets/images/slides/blank.gif">
               <div class="img-responsive camera_caption fadeFromBottom">
                 <h3>Notre travail consiste à simplifier le vôtre...</h3>
               </div>
@@ -132,11 +132,11 @@ if (isset($_POST['submit'])) {
   <div class="container">
     <div class="row team">
       <div class="col-md-4 b3">
-        <img class="img-responsive" src="images/picTeam/picT3.png">
-        <h4>Malek Boubakri</h4>
-        <h5>Directeur de production</h5>
-        <h5>Développeur certifié Java</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+        <img class="img-responsive" src="/assets/images/picTeam/picT2.png">
+        <h4>Aymen Ben Khemis</h4>
+        <h5>Fondateur et gérant</h5>
+        <h5>Développeur senior Javascript</h5>
+        <p hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
         <ul>
           <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -145,11 +145,11 @@ if (isset($_POST['submit'])) {
         </ul>
       </div>
       <div class="col-md-4">
-        <img class="img-responsive" src="images/picTeam/picT2.png">
-        <h4>Aymen Ben Khemis</h4>
-        <h5>Fondateur et gérant</h5>
-        <h5>Développeur senior Javascript</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+        <img class="img-responsive" src="/assets/images/picTeam/picT3.png">
+        <h4>Malek Boubakri</h4>
+        <h5>Directeur de production</h5>
+        <h5>Développeur certifié Java</h5>
+        <p hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
         <ul>
           <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -158,11 +158,11 @@ if (isset($_POST['submit'])) {
         </ul>
       </div>
       <div class="col-md-4 b1">
-        <img class="img-responsive" src="images/picTeam/picT1.png">
+        <img class="img-responsive" src="/assets/images/picTeam/picT1.png">
         <h4>Zaki Meddeb</h4>
         <h5>Développeur Full-stack</h5>
         <h5>Ingénieur de test et de validation</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+        <p hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
         <ul>
           <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -173,11 +173,11 @@ if (isset($_POST['submit'])) {
     </div>
     <div class="row team">
       <div class="col-md-4 b1">
-        <img class="img-responsive" src="images/picTeam/picT0.png">
+        <img class="img-responsive" src="/assets/images/picTeam/picT0.png">
         <h4>Zied Haj Salah</h4>
         <h5>Développeur Full-stack</h5>
         <h5>JavaScript/MERN stack Architect</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+        <p hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
         <ul>
           <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -186,10 +186,10 @@ if (isset($_POST['submit'])) {
         </ul>
       </div>
       <div class="col-md-4 b1">
-        <img class="img-responsive" src="images/picTeam/picT0.png">
+        <img class="img-responsive" src="/assets/images/picTeam/picT4.png">
         <h4>Khalil Chakroun</h4>
         <h5>Techno-commercial / formateur</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+        <p hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
         <ul>
           <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -218,14 +218,14 @@ if (isset($_POST['submit'])) {
       <div class="row about">
         <div class="col-md-6">
           <div class="about1">
-            <img class="pic1Ab" src="images/picAbout/aboutP1.png">
+            <img class="pic1Ab" src="/assets/images/picAbout/aboutP1.png">
             <h3><b>El Matador,</b> Sahloul - Kamel</h3>
             <p>Nulla scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra, felis et venenatis. aliquam, nulla nisi lobortis elit ac.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="about2">
-            <img class="pic2Ab" src="images/picAbout/aboutP2.png">
+            <img class="pic2Ab" src="/assets/images/picAbout/aboutP2.png">
             <h3><b>Les jardins fleuris,</b> Kantaoui - Akrem</h3>
             <p>Consectetur ornare nibh, a urna quis justo, adipiscing auctor, ut auctor feugiat fermentum nec quisque eget pharetra, felis et venenatis aliquam, nulla nisi lobortis elit, ac luctus.</p>
           </div>
@@ -237,14 +237,14 @@ if (isset($_POST['submit'])) {
       <div class="row about">
         <div class="col-md-6">
           <div class="about1">
-            <img class="pic1Ab" src="images/picAbout/aboutP3.png">
+            <img class="pic1Ab" src="/assets/images/picAbout/aboutP3.png">
             <h3><b>Wamia.tn,</b> E-Shop - Abderrazek</h3>
             <p>A auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra, felis et venenatis aliquam, nulla nisi lobortis elit, acnterdum ante feugiat vitae.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="about2">
-            <img class="pic2Ab" src="images/picAbout/aboutP4.png">
+            <img class="pic2Ab" src="/assets/images/picAbout/aboutP4.png">
             <h3><b>L'Astronomie,</b> Sahloul - Mehdi</h3>
             <p>Ornare nibh a auctor, mauris scelerisque eu proin nec urna nec a quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra felis et venenatis aliquam, nulla nisi lobortis elit, ac eleifend nisl ante nec lorem. </p>
           </div>
@@ -304,7 +304,7 @@ if (isset($_POST['submit'])) {
     <div class="container">
       <div class="row downLine">
         <div class="col-md-5 text-left copy">
-          <p>Copyright &copy; 2017 <img src="images/logo.png" style="width: 140px">. Tous les droits sont réservés.</p>
+          <p>Copyright &copy; 2017 <img src="/assets/images/logo.png" style="width: 140px">. Tous les droits sont réservés.</p>
         </div>
         <div class="col-md-2 text-center copy">
           <a href="http://www.dmca.com/Protection/Status.aspx?ID=15178652-a76e-4a52-9890-2c3c82fa51c7" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/dmca-badge-w100-5x1-07.png?ID=15178652-a76e-4a52-9890-2c3c82fa51c7" alt="DMCA.com Protection Status"></a>
